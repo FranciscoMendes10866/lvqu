@@ -21,7 +21,7 @@ app.get("/posts", async (req: Request, res: Response): Promise<Response> => {
   return res.json(posts);
 });
 
-const start = async (port: number, host: string): Promise<void> => {
+const start = async (port: number, host = "localhost"): Promise<void> => {
   try {
     await createConnection(ormConfig as ConnectionOptions);
     app.listen(port, host, () => {
@@ -33,4 +33,4 @@ const start = async (port: number, host: string): Promise<void> => {
   }
 };
 
-void start(3333, "localhost");
+void start(3333);
