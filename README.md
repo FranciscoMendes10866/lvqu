@@ -1,0 +1,2 @@
+# lvqu
+TypeORM Seeding Example 🌱
